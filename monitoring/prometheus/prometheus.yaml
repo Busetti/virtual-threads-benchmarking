@@ -6,8 +6,8 @@ scrape_configs:
   - job_name: 'spring-boot'
     metrics_path: '/actuator/prometheus'
     static_configs:
-      - targets: ['localhost:8080']
+      - targets: ['192.168.0.106:8080', '192.168.0.106:8081']
   - job_name: 'jmx'
     metrics_path: '/metrics'
     static_configs:
-      - targets: [ 'localhost:5555' ]
+      - targets: [ '192.168.0.106:5555' ]
