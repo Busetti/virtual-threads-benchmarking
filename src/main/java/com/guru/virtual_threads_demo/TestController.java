@@ -17,7 +17,7 @@ public class TestController {
 
     @GetMapping("/test")
     public String test(){
-        System.out.println(Thread.currentThread().getName());
+        System.out.println(Thread.currentThread().toString());
         return restClient.get()
                 .uri("/block")
                 .retrieve().body(String.class);
